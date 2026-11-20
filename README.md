@@ -24,7 +24,7 @@ Este ejemplo muestra una ilustración de un taller con estructura, maquinaria, h
 
 La reconstrucción 3D está en desarrollo. Esta maqueta conceptual permite girar, acercar, seleccionar conjuntos y usar vistas de planta y cortes. Sus máquinas y tuberías están simplificadas frente a la ilustración y las partes ocultas se infieren; no es un modelo constructivo.
 
-[Descargar el explorador HTML experimental](https://github.com/DavidVilem/scene-layout-forge/raw/refs/heads/gh-pages/explorador.html) y abrirlo en un navegador compatible con WebGL. GitHub muestra el código de los archivos HTML en su vista normal; para ejecutarlo desde un enlace web es necesario configurar GitHub Pages.
+[Abrir el explorador 3D experimental](https://davidvilem.github.io/scene-layout-forge/) directamente en el navegador. También puedes [descargar el archivo HTML](https://github.com/DavidVilem/scene-layout-forge/raw/refs/heads/gh-pages/explorador.html) y abrirlo localmente en un navegador compatible con WebGL.
 
 Las imágenes y el HTML se conservan en la rama [`gh-pages`](https://github.com/DavidVilem/scene-layout-forge/tree/gh-pages), separadas del paquete de la skill.
 
