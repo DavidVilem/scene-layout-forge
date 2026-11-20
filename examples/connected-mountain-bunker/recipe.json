@@ -1,0 +1,35 @@
+{
+  "id": "connected-mountain-bunker",
+  "pipeline": "physical-cutaway",
+  "counts": {
+    "stair": 5,
+    "console": 16
+  },
+  "camera": {
+    "azimuth": 38,
+    "elevation": 24
+  },
+  "labels": [
+    {
+      "text": "CONTROL ROOM",
+      "target": "L0Z4/console-0"
+    },
+    {
+      "text": "DORMITORY",
+      "target": "L1Z4/bed-0/mattress"
+    },
+    {
+      "text": "WORKSHOP",
+      "target": "L3Z4/bench-0/top"
+    },
+    {
+      "text": "VENTILATION DUCT",
+      "target": "L4Z4/ventilation"
+    },
+    {
+      "text": "CENTRAL STAIR",
+      "target": "core-stair-0"
+    }
+  ],
+  "brief": "Six connected occupied levels with explicit supported stairs, real apertures, program assemblies and a sectioned mountain. This bundled fixture explicitly selects hub; spine and branched have their own examples. Default exploration uses selection policy 3 to choose reproducibly among equally qualified supported candidates. Ring and stepped remain unsupported."
+}

@@ -1,0 +1,397 @@
+{
+  "skill_name": "scene-layout-forge",
+  "evals": [
+    {
+      "id": 1,
+      "name": "portable-small",
+      "prompt": "Create a single PNG of two storage vessels, one pump, one maintenance stair/platform and two helmeted workers. Use English callouts and the built-in graphite style. I have no reference images.",
+      "expected_output": "Exact counts; three useful callouts; no need for personal paths; actual artistic image reviewed.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "dense-hall",
+      "prompt": "Create one detailed anime-layout PNG of a double-height plant with six vessels, three pumps and six workers. Include architectural depth, overhead services and four English leader annotations. No reference images.",
+      "expected_output": "Purposeful dense architecture, not a bare repeated fixture; exact counts, neutral paper, readable workers and arrows.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "architecture-only",
+      "prompt": "Draw a four-storey service building with entry canopy, ramp and two rooftop cabinets. No people or processing machinery. Deliver one PNG.",
+      "expected_output": "Architecture-specific scene; no inherited tanks, pumps or workers; consistent floor count and supported entry.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "no-labels",
+      "prompt": "Draw a small industrial maintenance hall in graphite. Deliver one PNG without any text or arrows.",
+      "expected_output": "User override respected: no labels despite annotated-layout defaults.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "optional-reference",
+      "prompt": "Create an industrial anime background in one PNG. I cannot provide the reference image mentioned in another conversation. Use the written style.",
+      "expected_output": "No fabricated reference access and no search for private old paths; explicit text-only art direction.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "occupied-output",
+      "prompt": "Create one final PNG under output/test-01. That folder already contains a result; choose a new numbered folder and preserve it. Remove only new intermediates.",
+      "expected_output": "Previous result unchanged, new final decoded, owned files only cleaned, one final artifact.",
+      "files": []
+    },
+    {
+      "id": 7,
+      "name": "tool-unavailable",
+      "prompt": "Create a hand-drawn artistic PNG using this skill in an environment with no image-generation tool.",
+      "expected_output": "Clearly report the missing capability; no false claim that a calculated guide is a generative finish and no silent paid API.",
+      "files": []
+    },
+    {
+      "id": 8,
+      "name": "local-correction",
+      "prompt": "Review my generated industrial image: it should contain six workers and English arrow labels, but has seven workers and a yellow tint. Correct the image without redesigning it.",
+      "expected_output": "Inspect supplied image; targeted count/palette correction, preserve equipment and labels, maximum two corrections and honest remaining limits.",
+      "files": []
+    },
+    {
+      "id": 9,
+      "name": "orbital-no-reference",
+      "prompt": "Draw an orbital research station with habitats, trusses and solar arrays in one detailed technical-anime PNG. Use useful English arrows and no image references.",
+      "expected_output": "Select orbital components and meaningful docking/array labels; no factory props, invented people or mandatory gravity floor. Neutral paper and purposeful detail.",
+      "files": []
+    },
+    {
+      "id": 10,
+      "name": "plan-view",
+      "prompt": "Make a plan of a compact technical control room with storage, two operator seats and clear access. I need one PNG, no perspective and no dimension guesses.",
+      "expected_output": "Orthographic view, genuine door/opening geometry, no perspective convergence, appropriate labels, no invented dimensions.",
+      "files": []
+    },
+    {
+      "id": 11,
+      "name": "machine-service",
+      "prompt": "Draw the inside of an unfamiliar mechanical inspection unit, showing drive parts, a rotor, cooling bundle and service access. One image with useful labels.",
+      "expected_output": "Choose or implement relevant shapes with tests; do not silently replace them with tanks/boxes. Explain conceptual limits of power train and non-involute gears.",
+      "files": []
+    },
+    {
+      "id": 12,
+      "name": "unfamiliar-subject",
+      "prompt": "Draw a fictional cable-car mountain terminal with cabins, a sheave assembly, supports and a boarding platform. One technical-anime PNG without references.",
+      "expected_output": "Decompose unfamiliar subject beyond the fixture list; implement missing curved parts project-locally; real supported contacts, access and context-appropriate details; no generic factory.",
+      "files": []
+    },
+    {
+      "id": 13,
+      "name": "vehicle-interior",
+      "prompt": "Draw a scientific submarine interior with four crew, one seated at a console, no construction helmets, curved hull and an open circular watertight door. One PNG with English arrows.",
+      "expected_output": "Correct poses/counts, supported seated body, true curved surfaces/aperture, view inside hull, appropriate clothing, neutral detailed marks and correct arrow targets.",
+      "files": []
+    },
+    {
+      "id": 14,
+      "name": "free-camera-wide-detail",
+      "prompt": "Create one richly detailed drawing of a mountain cable-car terminal with four staff and useful English arrows. Choose the viewpoint freely. No reference images.",
+      "expected_output": "Choose and justify a useful non-close view, not an automatic frontal eye-level corridor. Transfer focal-region detail map and handwritten callouts to finish; inspect small assemblies at native size without tightening the crop. Deliver one PNG.",
+      "files": []
+    },
+    {
+      "id": 15,
+      "name": "requested-angle-and-style",
+      "prompt": "Draw a scientific vehicle workshop from a high oblique interior angle showing the whole space, three technicians and English callouts. Use only written style, no reference images.",
+      "expected_output": "Retain elevated wide composition through finish. Three line weights, near-white neutral paper, meaningful distributed small construction detail and hand-lettered arrow annotations; independent style/count review. No unsolicited close-up or second image.",
+      "files": []
+    },
+    {
+      "id": 16,
+      "name": "mechanical-transmission",
+      "prompt": "Draw a supported antenna elevation drive with motor, reducer and trunnion, one inspector and English arrows. One PNG; choose the view.",
+      "expected_output": "Trace transmission and load paths, distinguish stationary/rotating members, show plausible interfaces and supports. Do not infer internal gearing or full movement from a static illustration. Inspect final shaft/drive connections.",
+      "files": []
+    },
+    {
+      "id": 17,
+      "name": "ambiguous-arrow",
+      "prompt": "Label the reduction gearbox on a platform beside an operator and a guardrail. Use the written hand-drawn style.",
+      "expected_output": "Target a visible housing surface; no tip on person/rail, no report-heading underlines, legible hand-lettered captions. Apply bounded targeted correction if final arrow is ambiguous.",
+      "files": []
+    },
+    {
+      "id": 18,
+      "name": "short-context",
+      "prompt": "Draw a mountain cable-car terminal.",
+      "expected_output": "Infer restrained plausible terrain/access setting, choose a useful view, retain subject dominance, written graphite and semantic arrows. No fixed factory, white void or previous-image dependence.",
+      "files": []
+    },
+    {
+      "id": 19,
+      "name": "urban-variety",
+      "prompt": "Draw 16 towers in a riverside business district from above.",
+      "expected_output": "Meaningful variation in related forms, roofs, blocks and spacing; connected access and riverfront; no toy plinth or extra background towers violating count. Independent final count/context review.",
+      "files": []
+    },
+    {
+      "id": 20,
+      "name": "isolated-override",
+      "prompt": "Draw one pump isolated on white. No people or environment.",
+      "expected_output": "Honor explicit isolation rather than applying automatic scenery. Preserve written mark-making and appropriate semantic labels.",
+      "files": []
+    },
+    {
+      "id": 21,
+      "name": "generic-interior-context",
+      "prompt": "Draw the interior of a generic research aircraft cockpit.",
+      "expected_output": "No unsupported historical identity, no automatic crew/flight; choose intentional modest exterior or adjacent-space context and view that explains controls.",
+      "files": []
+    },
+    {
+      "id": 22,
+      "name": "ambiguous-short-subject",
+      "prompt": "Draw a crane.",
+      "expected_output": "Ask a concise clarification when request alone cannot distinguish a bird from lifting equipment; do not silently infer identity from unavailable history.",
+      "files": []
+    },
+    {
+      "id": 23,
+      "name": "short-airship-identity",
+      "prompt": "Illustrate an airship like the Hindenburg.",
+      "expected_output": "Research defining proportions; plan secondary systems and relevant scale context; no image references required. Inspect actual proportions, material cues and arrow targets.",
+      "files": []
+    },
+    {
+      "id": 24,
+      "name": "short-cutaway-context",
+      "prompt": "Illustrate a reactor interior with a cutaway.",
+      "expected_output": "Disclose conceptual family; appropriate enclosure and system relationships; cutaway does not erase context; no invented operating certification.",
+      "files": []
+    },
+    {
+      "id": 25,
+      "name": "short-depth",
+      "prompt": "Illustrate a water treatment plant.",
+      "expected_output": "Develop primary equipment, secondary access/structure/services and fine joints before finishing. Rich depth without blocked circulation or uniform hatch noise.",
+      "files": []
+    },
+    {
+      "id": 26,
+      "name": "typed-water-failure-gates",
+      "prompt": "Create a water-treatment hall with four vessels, two pumps, five workers and English callouts. Use schema v2 without references. Inspect interfaces, supports and access before and after finishing.",
+      "expected_output": "Typed interface and bearing checks run; missing coverage disclosed. No unsupported backwash/process claims. Preserve detail while independently checking final junctions.",
+      "files": []
+    },
+    {
+      "id": 27,
+      "name": "registered-novel-geometry",
+      "prompt": "Build a technical scene with a new curved component and supported services.",
+      "expected_output": "Register every component before validation; detect appended mesh geometry and disclose sampled-contact limits.",
+      "files": []
+    },
+    {
+      "id": 28,
+      "name": "short-dry-dock",
+      "prompt": "Dique seco.",
+      "expected_output": "Develop a subject-specific context, supported secondary assemblies and written detail map; do not use previous images, fixed personal paths or fabricate visual acceptance.",
+      "files": []
+    },
+    {
+      "id": 29,
+      "name": "correction-keeps-flow",
+      "prompt": "Correct the pump arrow without changing the approved scene.",
+      "expected_output": "Correction carries intake and discharge roles, endpoints and boundary meanings; external continuation must not become a blind cap or intake sump.",
+      "files": []
+    },
+    {
+      "id": 30,
+      "name": "horizontal-service-detail",
+      "prompt": "Draw a maintenance wall with horizontal cable trays on brackets.",
+      "expected_output": "Rotate tray rails and crossbars along X, use actual flat bearing seats, register wall mounts, and independently review the final image.",
+      "files": []
+    },
+    {
+      "id": 31,
+      "name": "repeated-short-design",
+      "prompt": "Draw a mountain bunker in section showing six connected levels.",
+      "expected_output": "Explore distinct spatial graphs, realize one with real openings and program-specific assemblies; six levels and coherent access. Repeat in a fresh session; compare topology independently of camera.",
+      "files": []
+    },
+    {
+      "id": 32,
+      "name": "physical-vs-display-cut",
+      "prompt": "Draw a sectional service building with four floors and connected stairs.",
+      "expected_output": "Validate complete physical model, then derive cutaway; section must not hide blocked access, missing support or solid floor through stair.",
+      "files": []
+    },
+    {
+      "id": 33,
+      "name": "explicit-seed",
+      "prompt": "Draw a research laboratory with design seed 42.",
+      "expected_output": "Repeatable design contract for the same version/intent, with independent camera/detail streams; do not claim byte-identical generated image.",
+      "files": []
+    },
+    {
+      "id": 34,
+      "name": "strict-unavailable-adapter",
+      "prompt": "Draw a detailed curved technical module with a novel helical access stair.",
+      "expected_output": "Implement/check defining geometry or state unsupported checks; no silent legacy downgrade or box substitution. Preserve one-image scope.",
+      "files": []
+    },
+    {
+      "id": 35,
+      "name": "optional-environment-motion",
+      "prompt": "Animate my existing colored landscape subtly, preserving both PNGs.",
+      "expected_output": "Read exact colored source, adapt masked motions to visible environment, retain source pair/history, produce reviewed loop with actual duration and dimensions; no invented people or geometry.",
+      "files": []
+    },
+    {
+      "id": 36,
+      "name": "articulated-motion-scope",
+      "prompt": "Make people walk and cars travel in this colored city.",
+      "expected_output": "Prepare clean plates, occlusion, paths and pose/rig assets or disclose unsupported scope. Do not mislabel rocking sprites or cloud-only animation as walking and traffic.",
+      "files": []
+    },
+    {
+      "id": 37,
+      "name": "idle-vehicle-motion",
+      "prompt": "Draw a tank at idle and animate the colored version subtly.",
+      "expected_output": "Finish illustrated then colored pair; visible exhaust origin if adding smoke, tracks and supports fixed unless a deliberate supported motion is requested. Retain all history.",
+      "files": []
+    },
+    {
+      "id": 38,
+      "name": "no-animation-by-default",
+      "prompt": "Draw a botanical greenhouse with plants.",
+      "expected_output": "Illustrated and colored PNGs only, no MP4 unless asked. Keep default geometry/detail/continuity workflow.",
+      "files": []
+    },
+    {
+      "id": 39,
+      "name": "forward-clouds",
+      "prompt": "Animate this colored landscape naturally as time passes.",
+      "expected_output": "Inspect motion inventory, clouds advance in one direction, foliage oscillates, no global ping-pong; preserve all PNGs/history.",
+      "files": []
+    },
+    {
+      "id": 40,
+      "name": "forward-traffic",
+      "prompt": "Animate cars driving and pedestrians walking in this colored city.",
+      "expected_output": "Prepared clean plates, RGBA vehicle layers, reviewed paths/occlusion and pedestrian pose sequences; no sliding still pedestrians or reversed traffic; explicitly disclose any deferred requested action.",
+      "files": []
+    },
+    {
+      "id": 41,
+      "name": "rotor-not-rocking",
+      "prompt": "Animate the visible ventilation fan.",
+      "expected_output": "Separated rotor rotates continuously around spindle, grille/housing fixed, no rocking, inspect aliasing and loop if requested.",
+      "files": []
+    },
+    {
+      "id": 42,
+      "name": "three-output-explicit",
+      "prompt": "Illustrate two vessels connected to a pump with maintenance access. Also create an interactive 3D explorer.",
+      "expected_output": "Retain the reviewed PNG pair and an offline real-3D explorer with recognizable correspondence, semantic parts and unchanged images; preserve complete history.",
+      "files": []
+    },
+    {
+      "id": 43,
+      "name": "inferred-hidden-interior",
+      "prompt": "Use my existing colored machine image to create an interactive exploded view.",
+      "expected_output": "Inspect available history first; distinguish visible/modelled/inferred geometry, do not invent hidden internals as facts, record source identities and uncertainties.",
+      "files": []
+    },
+    {
+      "id": 44,
+      "name": "image-only-override",
+      "prompt": "Create only a graphite illustration of a mountain cabin.",
+      "expected_output": "Respect the one-image scope; do not force coloring or HTML.",
+      "files": []
+    },
+    {
+      "id": 45,
+      "name": "explorer-known-failure",
+      "prompt": "Create the explorer using a model with a disconnected pipe endpoint.",
+      "expected_output": "Reject the detected failure, retain its report and repair the connection before accepting the model. Never weaken the validator.",
+      "files": []
+    },
+    {
+      "id": 46,
+      "name": "optional-3d-dormant",
+      "prompt": "Illustrate a small mountain observatory.",
+      "expected_output": "Two reviewed PNGs; no mandatory 3D or subject adapter block.",
+      "files": []
+    },
+    {
+      "id": 47,
+      "name": "external-image-reconstruction",
+      "prompt": "Build an interactive 3D explorer from this single image.",
+      "expected_output": "Source unchanged, agent-authored visual specification, defining real geometry, source/model comparison, inferred regions, browser checks and history.",
+      "files": []
+    },
+    {
+      "id": 48,
+      "name": "new-curved-subject",
+      "prompt": "Reconstruct a curved sailboat hull with its deck from my image.",
+      "expected_output": "Use composed surfaces or custom triangulated mesh, preserve visible silhouette and contacts, mark hidden depth inferred; do not stop at missing adapter or substitute boxes.",
+      "files": []
+    },
+    {
+      "id": 49,
+      "name": "maquette-entrance",
+      "prompt": "Reconstruct this detailed visitor center as a 3D miniature.",
+      "expected_output": "Retains a recognizable entrance, canopy, stairs, gallery and rooftop equipment; protected door/approach volumes pass; actual visual review confirms critical features.",
+      "files": []
+    },
+    {
+      "id": 50,
+      "name": "maquette-city",
+      "prompt": "Create a 3D miniature of this city image.",
+      "expected_output": "Keeps maquette style, varied towers/podiums/access and roofs; detail tiers fit city scale; no imposed observatory camera.",
+      "files": []
+    },
+    {
+      "id": 51,
+      "name": "blocked-door",
+      "prompt": "The model includes a wall across the main entrance. Review it.",
+      "expected_output": "Detect blocked protected space and repair actual geometry; do not exempt the wall or accept only on browser checks.",
+      "files": []
+    },
+    {
+      "id": 52,
+      "name": "shared-design-curved-hall",
+      "prompt": "Draw a new botanical conservatory and create its 3D explorer. Preserve the rounded roof, doors and paths.",
+      "expected_output": "Retain a shared spatial design before image generation; curved geometry and glazing stay attached to hosts. Independently compare source pixels and actual model. Hidden surfaces are inferred. No train-specific layout.",
+      "files": []
+    },
+    {
+      "id": 53,
+      "name": "existing-image-curved-body",
+      "prompt": "Reconstruct the provided fictional research vehicle image as a 3D maquette.",
+      "expected_output": "Author a continuous shell using loft or indexed meshes where needed; compare silhouette, windows and ground contacts. Do not replace the vehicle with boxes or a textured image plane. Record hidden-side inference.",
+      "files": []
+    },
+    {
+      "id": 54,
+      "name": "broken-walking-network",
+      "prompt": "Review this model: the corridor has a small missing floor segment and one disconnected destination.",
+      "expected_output": "Access network rejects unsupported centerline intervals and unreachable destinations; repairs retain all original targets and connection checks. Do not claim clearance widths from centerline validation.",
+      "files": []
+    },
+    {
+      "id": 55,
+      "name": "presentation-pavilion",
+      "prompt": "Illustrate a botanical pavilion and create a detailed presentation-maquette explorer. Keep history.",
+      "expected_output": "Deliver independently reviewed images and model; real door openings, roof ribs, glazed panels, interior planting and annex services; no inherited station or vehicle. Compare actual HTML to source. This prompt is a future end-to-end probe, not a claimed completed VS Code test.",
+      "files": []
+    },
+    {
+      "id": 56,
+      "name": "presentation-terminal",
+      "prompt": "Illustrate a railway terminal and create a presentation-maquette explorer preserving entrances, paths and abundant detail.",
+      "expected_output": "Construct roof profiles, glazing, vehicle shell and platform framing before final comparison. Repair known visible omissions. Browser success alone is not visual fidelity; preserve all outputs and history.",
+      "files": []
+    }
+  ]
+}

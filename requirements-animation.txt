@@ -1,0 +1,2 @@
+# Optional local MP4 encoder; alternatively provide ffmpeg on PATH.
+imageio-ffmpeg==0.8.1

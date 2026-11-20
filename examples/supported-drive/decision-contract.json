@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "example": "supported-drive",
+  "short_prompt": "Use $scene-layout-forge to illustrate the stopped supported drive example as one PNG. Motor -> input shaft -> coupling -> enclosed coaxial reduction gearbox -> output shaft -> rotor; two bearing supports. No people. Keep interfaces and supports, expose labelled parts, apply the written detail map and hand-lettered arrows. Choose a useful general oblique view. Read references/mechanical-coherence.md and the example README; report enclosed internals as unverified. Save one final PNG outside the skill and clean owned intermediates.\n\nApply references/context-composition.md: respect the explicit view and any isolated-study intent in this example; otherwise choose restrained context and a useful view. Treat example geometry/camera as adaptable patterns, not defaults for unrelated subjects. Plan meaningful variety without altering required counts or functional symmetry; inspect final context separately from detail.",
+  "intent": "Conceptual inline motor, coupling, enclosed coaxial reducer, output shaft and rotor between two bearing supports. Stopped for maintenance; no internal gear or dynamic verification claim.",
+  "decision_reference": "README.md#reproducible-decision-contract",
+  "schema_version": 1,
+  "adapter_kinds": [
+    "column",
+    "conduit",
+    "ring_frame",
+    "rotor",
+    "slab"
+  ],
+  "coverage_status": "partial",
+  "invariants": {
+    "recipe_counts": {
+      "rotor": 1,
+      "ring_frame": 2,
+      "worker": 0
+    },
+    "semantic_label_targets": [
+      {
+        "text": "DRIVE MOTOR",
+        "target": "motor"
+      },
+      {
+        "text": "SHAFT COUPLING",
+        "target": "coupling"
+      },
+      {
+        "text": "REDUCTION GEARBOX",
+        "target": "reducer"
+      },
+      {
+        "text": "BEARING HOUSING",
+        "target": "bearing-a"
+      }
+    ],
+    "relationships": [
+      "declared support paths",
+      "existing typed interfaces or localized attachments",
+      "actual openings/access when present"
+    ]
+  },
+  "positive_command": "python -B scripts/run_example.py supported-drive --validate-only",
+  "negative_command": "python -B scripts/check_examples.py --example supported-drive",
+  "negative_controls": "Incorrect inventory; floating worker, displaced route endpoint, detached attachment or shaft/bearing misalignment where the actual fixture defines them.",
+  "limits": [
+    "No final-pixel observation is supplied by these geometry commands.",
+    "Coverage partial remains partial; a schema number or successful loader cannot promote it to complete strict coverage.",
+    "No load, dynamics, hydraulic or biomechanical certification."
+  ]
+}

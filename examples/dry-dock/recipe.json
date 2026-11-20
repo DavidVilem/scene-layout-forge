@@ -1,0 +1,46 @@
+{
+  "id": "dry-dock",
+  "counts": {
+    "custom": 1,
+    "pump": 2,
+    "worker": 5,
+    "stair": 1,
+    "footing": 6
+  },
+  "camera": {
+    "eye": [
+      28,
+      -17,
+      20
+    ],
+    "target": [
+      17,
+      10,
+      3.3
+    ],
+    "fov": 45
+  },
+  "labels": [
+    {
+      "text": "KEEL BLOCKS",
+      "target": "keel-block-2"
+    },
+    {
+      "text": "SUCTION LINE",
+      "target": "intake-0"
+    },
+    {
+      "text": "DEWATERING PUMP",
+      "target": "pump-0"
+    },
+    {
+      "text": "MAINTENANCE WALKWAY",
+      "target": "walkway"
+    },
+    {
+      "text": "DISCHARGE HEADER",
+      "target": "discharge-header"
+    }
+  ],
+  "brief": "A conceptual dry dock with one supported ship, two pumps, five workers and a common discharge header."
+}

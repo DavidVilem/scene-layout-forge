@@ -1,0 +1,18 @@
+# Continue the requested 3D until acceptance or a concrete external blocker
+
+The agent performs this loop in the same task. The helper persists work; it is not an autonomous vision model or mesh generator. An unresolved first comparison is a next action, not a final answer. Keep the accepted PNG pair fixed throughout the loop.
+
+1. Render the current candidate with a camera comparable to the source. Inspect both images. Fit the camera before mistaking perspective for geometry.
+2. Call `explorer_repair_cycle.record(job, issues, approach, evidence, previous_job=None)`. Evidence is a list of retained comparison/capture file paths. Each issue has stable `id`, actual `components`, `observed`, `target`, `action`, `verification`, `priority` (`critical`, `major`, `detail`), `status` (`open`, `resolved`), and `progress` (`new`, `improved`, `unchanged`, `regressed`, `resolved`). Resolution also needs `neighbor_checks`. Describe visible observations, not invented scores. Empty issues are legitimate only after genuinely inspecting a defect-free candidate; inherited issues cannot disappear.
+3. Execute the returned step. For `revise_geometry`, modify the specification and call `reconstruction_repair.revise` with the open issues. Keep connections, supports, access targets and accepted neighboring geometry. Attach the new job to the same pipeline. The coordinator carries the parent review forward automatically.
+4. Rebuild and capture a new comparison; review every inherited issue plus any new regression. Each repair receives a new candidate and fresh evidence. After two unchanged/regressed revisions on an issue, `change_modeling_approach` requests a different construction or camera fit. Record that concrete change in `approach`; do not merely add bolts or rename the review.
+5. Repeat while issues remain. When `validate_and_accept` is returned, run the normal connection checks, browser tests and source-fidelity acceptance. The queue never creates `delivered.json` or bypasses acceptance. Record new failures as issues and continue.
+6. Advance the pipeline after acceptance and deliver only when it reports complete. Preserve all candidates, comparisons, specifications and decisions in history.
+
+Do not transfer the two image-edit correction limit to 3D repairs. Do not run an unbounded blind shell loop: visual inspection and an authored geometry change are required each round. Tool/access failure, user cancellation or an actual execution limit may interrupt the loop; record the exact failure and next repair so it resumes the same run. Geometric difficulty, a first mismatch or passing controls alone are not completion or stopping conditions. No finite procedure guarantees exact reconstruction of every image; unseen surfaces remain documented inferences.
+
+## Example: mountain visitor center
+
+First review identifies `roof-axis` (critical), `porch-span` (major) and `terrain-profile` (major). Fit the source camera and correct roof footprint, ridge direction and eave heights before dressing the landscape. Check roof-to-column contacts and entry clearance after changing the porch. Then model foreground terraces, retaining edges, access path and vegetation masses to match the visible setting. Retain intentional miniature simplifications in distant texture; do not use them to excuse a different roof silhouette. Inspect new views for regressions. This is a repair priority example, not a fixed design template.
+
+CLI: run `scripts/explorer_repair_cycle.py <job> --review <review.json>` with the verified interpreter. Omit `--review` to inspect the next step. The delivery coordinator exposes it as `repair_step` within `review_or_repair_3d`.

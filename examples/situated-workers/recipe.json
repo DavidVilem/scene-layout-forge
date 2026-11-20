@@ -1,0 +1,11 @@
+{
+  "id": "situated-workers",
+  "counts": {"worker": 2, "seat": 1, "slab": 2, "column": 4},
+  "camera": {"projection": "perspective", "eye": [6, 5, 3.5], "target": [0, 0.2, 0.75], "fov": 38},
+  "labels": [
+    {"text": "SEATED OPERATOR", "target": "seated-operator"},
+    {"text": "SUPPORTED SEAT", "target": "seat"},
+    {"text": "INSPECTION SURFACE", "target": "bench/top"}
+  ],
+  "brief": "Two original schematic task poses: one seated operator with pelvis on the actual seat and both feet on the floor, and one leaning inspector with a hand on the supported bench. These exact counts belong only to this fixture. No anatomy, balance, grip, medical or operational performance claim."
+}

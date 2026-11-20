@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scene Layout Forge"
+  short_description: "Graphite and color, with optional 3D reconstruction"
+  default_prompt: "Use $scene-layout-forge to create ilustrada.png and its faithful coloreada.png edit, preserving detail, connections and history; build explorador.html through the separate reconstruction kernel only when I request 3D."

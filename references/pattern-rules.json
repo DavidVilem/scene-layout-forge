@@ -1,0 +1,462 @@
+{
+  "version": 1,
+  "scope": "Original conditional rules in six priority families. No images, private collection identifiers, external assets or prior conversation are required.",
+  "confidence_policy": {
+    "baseline": 0.25,
+    "per_independent_family": 0.1,
+    "ceiling": 0.8,
+    "interpretation": "Bounded evidence-organization score: each registered independent family contributes once. It is not an empirical probability, a test-execution result or a scene/pixel pass."
+  },
+  "evidence_families": {
+    "projection_geometry": {
+      "question": "Do camera equations preserve the requested parallel/convergent families?",
+      "independence_basis": "Analytical projection invariants; repeated camera examples are one evidence family."
+    },
+    "surface_contacts": {
+      "question": "Do actual surfaces and opposed normals meet at the claimed location?",
+      "independence_basis": "Physical contact samples independent of screen-space visibility."
+    },
+    "guide_readability": {
+      "question": "Are required owned components and junctions readable at the usage size?",
+      "independence_basis": "Rendered ownership/visibility checks independent of physical contact validity."
+    },
+    "context_inventory": {
+      "question": "Does context respect purpose, exclusions and exact inventory?",
+      "independence_basis": "Scene membership constraints independent of light or decorative appearance."
+    },
+    "material_coordinates": {
+      "question": "Do local frames keep marks attached through rigid motion and cylinder seams?",
+      "independence_basis": "Surface-coordinate invariants independent of material shading preferences."
+    },
+    "pixel_ownership": {
+      "question": "Can graphical shading change while geometry ownership and depth remain fixed?",
+      "independence_basis": "Controlled raster/ownership ablation independent of coordinate continuity."
+    },
+    "actor_contacts": {
+      "question": "Do standing feet and declared tool contacts meet actual supported surfaces?",
+      "independence_basis": "Specific pose/contact constraints; repeated figure drawings are not added evidence."
+    },
+    "natural_masses": {
+      "question": "Do original tree masses stay bounded and contact their ground?",
+      "independence_basis": "Procedural natural geometry checks, distinct from actor or medical claims."
+    }
+  },
+  "patterns": [
+    {
+      "id": "view_orthographic",
+      "family": "projection",
+      "mode": "operational",
+      "principle": "Keep the actual orthographic camera parallel and scale-consistent. Do not invent a vanishing point or atmospheric depth cue to make a plan look more dramatic.",
+      "applicability": {
+        "fact": "projection",
+        "in": [
+          "orthographic"
+        ]
+      },
+      "exceptions": [
+        {
+          "when": {
+            "fact": "projection",
+            "in": [
+              "perspective"
+            ]
+          },
+          "reason": "Perspective cameras have a separate convergence rule; this orthographic rule is not transferable."
+        }
+      ],
+      "confidence": {
+        "ceiling": 0.8,
+        "basis": "Independent original procedural evidence families, not image-copy frequency.",
+        "interpretation": "A bounded evidence-organization score, not a probability of visual or physical correctness."
+      },
+      "evidence": [
+        {
+          "family": "projection_geometry",
+          "source": "scripts/test_drawing_projection.py::test_orthographic_parallel_families_have_no_finite_vanishing_point",
+          "scope": "Analytical projection invariant."
+        },
+        {
+          "family": "projection_geometry",
+          "source": "scripts/test_drawing_projection.py::test_orthographic_size_is_invariant_under_depth_translation",
+          "scope": "Same analytical family; this extra test is not an independent confidence increment."
+        }
+      ],
+      "limits": [
+        "Only linear orthographic projection is covered. Fish-eye or recursive projection remains unsupported."
+      ]
+    },
+    {
+      "id": "view_perspective",
+      "family": "projection",
+      "mode": "operational",
+      "principle": "Derive convergence from the actual camera and each object axis. Keep physical scale consistent; changing the camera is a view change rather than a new spatial organization.",
+      "applicability": {
+        "fact": "projection",
+        "in": [
+          "perspective"
+        ]
+      },
+      "exceptions": [
+        {
+          "when": {
+            "fact": "view_intent",
+            "in": [
+              "plan"
+            ]
+          },
+          "reason": "A requested plan cannot be satisfied by applying perspective cues; reconcile the camera/view contract first."
+        }
+      ],
+      "confidence": {
+        "ceiling": 0.8,
+        "basis": "Independent original procedural evidence families, not image-copy frequency.",
+        "interpretation": "A bounded evidence-organization score, not a probability of visual or physical correctness."
+      },
+      "evidence": [
+        {
+          "family": "projection_geometry",
+          "source": "scripts/test_drawing_projection.py::test_three_point_tilted_view_verticals_converge_too",
+          "scope": "Analytical tilted-view projection."
+        },
+        {
+          "family": "guide_readability",
+          "source": "scripts/test_visual_contract.py::test_camera_freedom_and_requested_top_view",
+          "scope": "Requested-view and readability contract."
+        }
+      ],
+      "limits": [
+        "No preferred azimuth or universal one/two/three-point recipe is imposed. This rule does not validate an unsupported lens model."
+      ]
+    },
+    {
+      "id": "contact_requires_surface",
+      "family": "contact",
+      "mode": "negative_control",
+      "principle": "Use the declared physical surface/contact adapters before claiming support. A nearby screen owner or a dark contact shadow cannot supply a missing relation, positive-area patch or load path.",
+      "applicability": {
+        "all": [
+          {
+            "fact": "domain",
+            "in": [
+              "building",
+              "process",
+              "mechanism",
+              "vehicle",
+              "environment"
+            ]
+          },
+          {
+            "fact": "has_support_contract",
+            "eq": true
+          }
+        ]
+      },
+      "exceptions": [],
+      "confidence": {
+        "ceiling": 0.8,
+        "basis": "Independent original procedural evidence families, not image-copy frequency.",
+        "interpretation": "A bounded evidence-organization score, not a probability of visual or physical correctness."
+      },
+      "evidence": [
+        {
+          "family": "surface_contacts",
+          "source": "scripts/test_physical_contracts.py::test_proximity_without_relation_is_not_contact",
+          "scope": "Missing physical relation must remain missing."
+        },
+        {
+          "family": "guide_readability",
+          "source": "scripts/test_projection_review.py::test_component_visible_elsewhere_does_not_prove_junction_visible",
+          "scope": "Localized visible evidence is separate from contact."
+        }
+      ],
+      "limits": [
+        "An empty exception list means no stylistic exception can bypass a claimed physical support. Unsupported surface adapters remain unsupported; this rule is not a load/stability solver."
+      ]
+    },
+    {
+      "id": "light_open_air",
+      "family": "light",
+      "mode": "comparison",
+      "principle": "For an explicitly open-air perspective treatment, compare selective distant contrast reduction while holding the geometry and camera fixed. Keep required junctions readable; distance alone does not determine darkness.",
+      "applicability": {
+        "all": [
+          {
+            "fact": "projection",
+            "in": [
+              "perspective"
+            ]
+          },
+          {
+            "fact": "context_mode",
+            "in": [
+              "situated",
+              "interior",
+              "landscape"
+            ]
+          },
+          {
+            "fact": "value_policy",
+            "in": [
+              "open_air",
+              "dark_interior",
+              "neutral",
+              "diagram"
+            ]
+          }
+        ]
+      },
+      "exceptions": [
+        {
+          "when": {
+            "fact": "value_policy",
+            "in": [
+              "dark_interior"
+            ]
+          },
+          "reason": "A dark interior may be darker at depth; preserve its local contrast intent rather than imposing a pale background."
+        },
+        {
+          "when": {
+            "fact": "value_policy",
+            "in": [
+              "neutral",
+              "diagram"
+            ]
+          },
+          "reason": "Neutral and diagram policies do not establish an atmospheric open-air gradient."
+        }
+      ],
+      "confidence": {
+        "ceiling": 0.8,
+        "basis": "Independent original procedural evidence families, not image-copy frequency.",
+        "interpretation": "A bounded evidence-organization score, not a probability of visual or physical correctness."
+      },
+      "evidence": [
+        {
+          "family": "pixel_ownership",
+          "source": "scripts/test_visual_contract.py::test_light_and_material_change_pixels_not_geometry",
+          "scope": "Controlled light/material ablation keeps physical geometry."
+        },
+        {
+          "family": "guide_readability",
+          "source": "scripts/test_projection_review.py::test_larger_focal_width_cannot_compensate_hidden_junction",
+          "scope": "Contrast/detail cannot compensate for a missing critical joint."
+        }
+      ],
+      "limits": [
+        "Open-air graphics do not simulate atmospheric scattering. Final pixels need direct review and neutral paper does not require a bright scene."
+      ]
+    },
+    {
+      "id": "light_dark_interior",
+      "family": "light",
+      "mode": "operational",
+      "principle": "Preserve the declared dark-interior value policy and reserve local contrast for the subject and critical junctions. Neutral paper and readable contacts can coexist with dark interior masses.",
+      "applicability": {
+        "fact": "value_policy",
+        "in": [
+          "dark_interior"
+        ]
+      },
+      "exceptions": [
+        {
+          "when": {
+            "fact": "view_intent",
+            "in": [
+              "plan"
+            ]
+          },
+          "reason": "A plan should use its declared diagrammatic value system instead of importing interior depth treatment."
+        }
+      ],
+      "confidence": {
+        "ceiling": 0.8,
+        "basis": "Independent original procedural evidence families, not image-copy frequency.",
+        "interpretation": "A bounded evidence-organization score, not a probability of visual or physical correctness."
+      },
+      "evidence": [
+        {
+          "family": "pixel_ownership",
+          "source": "scripts/test_visual_contract.py::test_light_and_material_change_pixels_not_geometry",
+          "scope": "Light treatment changes pixels without changing the scene."
+        },
+        {
+          "family": "guide_readability",
+          "source": "scripts/test_visual_contract.py::test_hidden_focus_is_never_admissible",
+          "scope": "Darkness does not excuse invisible required focus."
+        }
+      ],
+      "limits": [
+        "This is graphical value intent, not an optical simulation or proof that generated shadows are physically correct."
+      ]
+    },
+    {
+      "id": "context_isolated",
+      "family": "context",
+      "mode": "operational",
+      "principle": "Honor the explicit isolated context. Keep attention on the registered subject and do not add a workshop, landscape, people or reflected figures merely because the object could be used there.",
+      "applicability": {
+        "fact": "context_mode",
+        "in": [
+          "isolated"
+        ]
+      },
+      "exceptions": [],
+      "confidence": {
+        "ceiling": 0.8,
+        "basis": "Independent original procedural evidence families, not image-copy frequency.",
+        "interpretation": "A bounded evidence-organization score, not a probability of visual or physical correctness."
+      },
+      "evidence": [
+        {
+          "family": "context_inventory",
+          "source": "scripts/test_visual_contract.py::test_exact_context_counts_exclusions_and_protected_ids",
+          "scope": "Explicit context inventory and exclusions."
+        }
+      ],
+      "limits": [
+        "No decorative exception overrides explicit isolation. This rule neither removes required physical supports nor decides whether a supplied reference contains extra objects."
+      ]
+    },
+    {
+      "id": "context_with_purpose",
+      "family": "context",
+      "mode": "operational",
+      "principle": "Use situated context to explain support, access, use, scale or location. Physical context must keep its registered contacts; preserve exclusions and protected reading spaces.",
+      "applicability": {
+        "all": [
+          {
+            "fact": "domain",
+            "in": [
+              "building",
+              "process",
+              "mechanism",
+              "vehicle",
+              "environment"
+            ]
+          },
+          {
+            "fact": "context_mode",
+            "in": [
+              "situated",
+              "interior",
+              "landscape"
+            ]
+          }
+        ]
+      },
+      "exceptions": [
+        {
+          "when": {
+            "fact": "context_mode",
+            "in": [
+              "isolated"
+            ]
+          },
+          "reason": "Explicit isolation has priority over a general contextual enrichment rule."
+        }
+      ],
+      "confidence": {
+        "ceiling": 0.8,
+        "basis": "Independent original procedural evidence families, not image-copy frequency.",
+        "interpretation": "A bounded evidence-organization score, not a probability of visual or physical correctness."
+      },
+      "evidence": [
+        {
+          "family": "context_inventory",
+          "source": "scripts/test_visual_contract.py::test_exact_context_counts_exclusions_and_protected_ids",
+          "scope": "Counts and exclusions are separate from apparent richness."
+        },
+        {
+          "family": "surface_contacts",
+          "source": "scripts/test_physical_contracts.py::test_sloped_translated_ground_uses_world_contact_frame",
+          "scope": "Physical terrain context retains world contact evidence."
+        }
+      ],
+      "limits": [
+        "This rule does not automatically select a real place, building era or new subject. Unmodeled environment mechanics remain unverified."
+      ]
+    },
+    {
+      "id": "material_local_frames",
+      "family": "material",
+      "mode": "operational",
+      "principle": "Keep justified material marks attached to the declared local surface frame. Tune direction, density and scale independently while preserving shape, depth and ownership; a clean glass region may remain unmarked.",
+      "applicability": {
+        "all": [
+          {
+            "fact": "material_families",
+            "intersects": [
+              "matte_metal",
+              "glass",
+              "concrete",
+              "wood",
+              "stone",
+              "cloth",
+              "rubber"
+            ]
+          },
+          {
+            "fact": "has_material_frames",
+            "eq": true
+          }
+        ]
+      },
+      "exceptions": [],
+      "confidence": {
+        "ceiling": 0.8,
+        "basis": "Independent original procedural evidence families, not image-copy frequency.",
+        "interpretation": "A bounded evidence-organization score, not a probability of visual or physical correctness."
+      },
+      "evidence": [
+        {
+          "family": "material_coordinates",
+          "source": "scripts/test_visual_contract.py::test_surface_frame_rotates_with_geometry_and_cylinder_seam_agrees",
+          "scope": "Rigid frame and cylindrical seam consistency."
+        },
+        {
+          "family": "pixel_ownership",
+          "source": "scripts/test_drawing_style.py::test_graphite_preserves_depth_ownership_and_route_visibility",
+          "scope": "Graphical marks preserve geometric ownership."
+        }
+      ],
+      "limits": [
+        "A frame declaration is not a physical validation pass. Arbitrary deforming UV transport, optical transmission and a compulsory texture density are not supported."
+      ]
+    },
+    {
+      "id": "organic_scope_only",
+      "family": "organic",
+      "mode": "scope_limit",
+      "principle": "Use registered standing actors or tree masses for scale, task, silhouette and contact only. These adapters do not establish medical or anatomical correctness, species identity, biomechanical performance or an unsupported seated pose.",
+      "applicability": {
+        "fact": "organic_types",
+        "intersects": [
+          "standing_actor",
+          "tree_mass"
+        ]
+      },
+      "exceptions": [],
+      "confidence": {
+        "ceiling": 0.7,
+        "basis": "Independent original procedural evidence families, not image-copy frequency.",
+        "interpretation": "A bounded evidence-organization score, not a probability of visual or physical correctness."
+      },
+      "evidence": [
+        {
+          "family": "actor_contacts",
+          "source": "scripts/test_visual_contract.py::test_actor_height_and_real_feet_cannot_be_replaced_by_shadow_or_pose_label",
+          "scope": "Standing geometric contact and physical height only."
+        },
+        {
+          "family": "natural_masses",
+          "source": "scripts/test_visual_contract.py::test_natural_families_are_bounded_varied_and_really_touch_ground",
+          "scope": "Bounded original natural mass and base contact only."
+        }
+      ],
+      "limits": [
+        "No medical guidance, anatomical canon, species diagnosis or biological accuracy follows from these sources. Unknown organic adapters do not activate this rule or gain validation."
+      ]
+    }
+  ]
+}

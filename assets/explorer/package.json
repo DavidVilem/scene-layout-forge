@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "description": "Development-only dependencies; a bundled offline viewer ships with the skill",
+  "dependencies": {"three": "0.187.0", "esbuild": "0.28.2"},
+  "devDependencies": {"playwright": "1.65.1"}
+}

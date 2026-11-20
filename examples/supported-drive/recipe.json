@@ -1,0 +1,31 @@
+{
+  "id": "supported-drive",
+  "counts": {
+    "rotor": 1,
+    "ring_frame": 2,
+    "worker": 0
+  },
+  "camera": {
+    "azimuth": 42,
+    "elevation": 30
+  },
+  "labels": [
+    {
+      "text": "DRIVE MOTOR",
+      "target": "motor"
+    },
+    {
+      "text": "SHAFT COUPLING",
+      "target": "coupling"
+    },
+    {
+      "text": "REDUCTION GEARBOX",
+      "target": "reducer"
+    },
+    {
+      "text": "BEARING HOUSING",
+      "target": "bearing-a"
+    }
+  ],
+  "brief": "Conceptual inline motor, coupling, enclosed coaxial reducer, output shaft and rotor between two bearing supports. Stopped for maintenance; no internal gear or dynamic verification claim."
+}

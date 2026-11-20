@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "example": "situated-workers",
+  "short_prompt": "Create one neutral graphite and fine-ink technical-anime illustration from this validated guide. Preserve exactly two schematic adult-scale workers: the seated operator's pelvis meets the actual seat and both feet meet the floor; the leaning inspector's left palm meets the bench top. Preserve their distinct physical poses, stature, world placement, furniture and clear space. Keep all three semantic English callouts attached to visible target surfaces. Use purposeful garment seams and furniture joints without changing limb paths, contact destinations or geometry. The static guide does not certify anatomy, balance or grip. Review actual generated pixels independently; do not invent hidden contacts.",
+  "intent": "Two original schematic task poses: one seated operator with pelvis on the actual seat and both feet on the floor, and one leaning inspector with a hand on the supported bench. These exact counts belong only to this fixture. No anatomy, balance, grip, medical or operational performance claim.",
+  "decision_reference": "README.md#reproducible-decision-contract",
+  "schema_version": 2,
+  "adapter_kinds": [
+    "column",
+    "seat",
+    "slab",
+    "worker"
+  ],
+  "coverage_status": "passed",
+  "invariants": {
+    "recipe_counts": {
+      "worker": 2,
+      "seat": 1,
+      "slab": 2,
+      "column": 4
+    },
+    "semantic_label_targets": [
+      {
+        "text": "SEATED OPERATOR",
+        "target": "seated-operator"
+      },
+      {
+        "text": "SUPPORTED SEAT",
+        "target": "seat"
+      },
+      {
+        "text": "INSPECTION SURFACE",
+        "target": "bench/top"
+      }
+    ],
+    "relationships": [
+      "declared support paths",
+      "existing typed interfaces or localized attachments",
+      "actual openings/access when present"
+    ]
+  },
+  "positive_command": "python -B scripts/run_example.py situated-workers --validate-only",
+  "negative_command": "python -B scripts/check_examples.py --example situated-workers",
+  "negative_controls": "Incorrect inventory; floating worker, displaced route endpoint, detached attachment or shaft/bearing misalignment where the actual fixture defines them.",
+  "limits": [
+    "No final-pixel observation is supplied by these geometry commands.",
+    "Coverage partial remains partial; a schema number or successful loader cannot promote it to complete strict coverage.",
+    "No load, dynamics, hydraulic or biomechanical certification."
+  ]
+}

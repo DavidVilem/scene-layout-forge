@@ -1,0 +1,26 @@
+{
+  "id": "service-building",
+  "counts": {
+    "door": 1,
+    "ramp": 1,
+    "cabinet": 2,
+    "worker": 0,
+    "vessel": 0,
+    "pump": 0
+  },
+  "camera": {
+    "azimuth": 55,
+    "elevation": 22
+  },
+  "labels": [
+    {
+      "text": "ENTRANCE CANOPY",
+      "target": "entry-canopy"
+    },
+    {
+      "text": "ROOFTOP EQUIPMENT",
+      "target": "roof-service-0"
+    }
+  ],
+  "brief": "Four-storey technical service building, two structural bays per side, an entrance ramp and canopy, rooftop service cabinets and planted forecourt. No process vessels, pumps or workers. Draw a three-quarter exterior in neutral graphite and fine ink. Label the entrance canopy and rooftop equipment in English. This tests architectural variety without inheriting industrial fixture objects."
+}

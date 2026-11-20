@@ -1,0 +1,76 @@
+{
+  "status_values": [
+    "pass",
+    "fail",
+    "not_run",
+    "occluded_unverified"
+  ],
+  "criteria": [
+    {
+      "id": "scope",
+      "required": true,
+      "check": "One requested PNG; no HTML, animation or unrelated deliverables."
+    },
+    {
+      "id": "counts",
+      "required": true,
+      "check": "Count actual visible equipment and people against the brief."
+    },
+    {
+      "id": "connections",
+      "required": true,
+      "check": "Trace every required visible route; record occluded segments separately."
+    },
+    {
+      "id": "access",
+      "required": true,
+      "check": "Stairs reach open landings, supports contact and feet meet surfaces."
+    },
+    {
+      "id": "art",
+      "required": true,
+      "check": "Reference-like manual graphite, depth and purposeful architectural detail."
+    },
+    {
+      "id": "palette",
+      "required": true,
+      "check": "Neutral gray ink and near-white paper, no unintended yellow or sepia."
+    },
+    {
+      "id": "labels",
+      "required": true,
+      "check": "Exact English wording and correct arrow targets, or no text if requested."
+    },
+    {
+      "id": "portability",
+      "required": true,
+      "check": "No dependency on a personal folder or private reference."
+    },
+    {
+      "id": "delivery",
+      "required": true,
+      "check": "Decoded PNG, non-overwrite, clean owned intermediates, preserved inputs."
+    },
+    {
+      "id": "design_realization",
+      "required": true,
+      "check": "Chosen topology is realized in actual zones and routes, not evidence detached from rendered geometry."
+    },
+    {
+      "id": "diversity",
+      "required": true,
+      "check": "Open repeated briefs vary allowed topology/program, not only seed texture, camera or scale; explicit repetition/seed overrides prevail."
+    },
+    {
+      "id": "physical_cut",
+      "required": true,
+      "check": "A display section derives from a separately validated physical model; omitted walls never excuse solid-host access failure."
+    },
+    {
+      "id": "coverage_truth",
+      "required": true,
+      "check": "Report unsupported, not_run and occluded checks explicitly; do not turn a legacy result or graph test into full physical/artistic approval."
+    }
+  ],
+  "rule": "Do not compute a pass from numerical geometry alone. Any required fail fails the artistic acceptance; not_run and occluded_unverified are not positive evidence."
+}

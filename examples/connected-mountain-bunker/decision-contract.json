@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "example": "connected-mountain-bunker",
+  "short_prompt": "Illustrate a connected six-level mountain bunker with varied rooms and English callouts. Choose a useful cutaway view and develop architectural detail before finishing.",
+  "intent": "Six connected occupied levels with explicit supported stairs, real apertures, program assemblies and a sectioned mountain. This bundled fixture explicitly selects hub; spine and branched have their own examples. Default exploration uses selection policy 3 to choose reproducibly among equally qualified supported candidates. Ring and stepped remain unsupported.",
+  "decision_reference": "README.md#reproducible-decision-contract",
+  "schema_version": 2,
+  "adapter_kinds": [
+    "cabinet",
+    "column",
+    "console",
+    "custom",
+    "duct",
+    "footing",
+    "seat",
+    "slab",
+    "stair",
+    "wall"
+  ],
+  "coverage_status": "passed",
+  "invariants": {
+    "recipe_counts": {
+      "stair": 5,
+      "console": 16
+    },
+    "semantic_label_targets": [
+      {
+        "text": "CONTROL ROOM",
+        "target": "L0Z4/console-0"
+      },
+      {
+        "text": "DORMITORY",
+        "target": "L1Z4/bed-0/mattress"
+      },
+      {
+        "text": "WORKSHOP",
+        "target": "L3Z4/bench-0/top"
+      },
+      {
+        "text": "VENTILATION DUCT",
+        "target": "L4Z4/ventilation"
+      },
+      {
+        "text": "CENTRAL STAIR",
+        "target": "core-stair-0"
+      }
+    ],
+    "relationships": [
+      "declared support paths",
+      "existing typed interfaces or localized attachments",
+      "actual openings/access when present"
+    ]
+  },
+  "positive_command": "python -B scripts/run_example.py connected-mountain-bunker --validate-only",
+  "negative_command": "python -B scripts/check_examples.py --example connected-mountain-bunker",
+  "negative_controls": "Incorrect inventory; floating worker, displaced route endpoint, detached attachment or shaft/bearing misalignment where the actual fixture defines them.",
+  "limits": [
+    "No final-pixel observation is supplied by these geometry commands.",
+    "Coverage partial remains partial; a schema number or successful loader cannot promote it to complete strict coverage.",
+    "No load, dynamics, hydraulic or biomechanical certification."
+  ]
+}
