@@ -6,6 +6,28 @@ Skill para crear ilustraciones técnicas detalladas en grafito y tinta, editarla
 
 La skill puede representar edificios, entornos urbanos, instalaciones, vehículos, planos e interiores mecánicos. Desarrolla un plan espacial, conserva las conexiones y los apoyos visibles, y exige revisar el resultado visual. Los archivos de trabajo y las revisiones se conservan en el historial del proyecto.
 
+## Ejemplo: taller mecánico industrial
+
+Este ejemplo muestra una ilustración de un taller con estructura, maquinaria, herramientas y tuberías, seguida de su edición a color.
+
+### Ilustración en grafito
+
+![Taller mecánico ilustrado en grafito y tinta](https://raw.githubusercontent.com/DavidVilem/scene-layout-forge/gh-pages/ilustrada.png)
+
+### Edición coloreada
+
+![Taller mecánico coloreado](https://raw.githubusercontent.com/DavidVilem/scene-layout-forge/gh-pages/coloreada.png)
+
+### Explorador 3D experimental
+
+![Captura del explorador 3D del taller](https://raw.githubusercontent.com/DavidVilem/scene-layout-forge/gh-pages/vista-3d.png)
+
+La reconstrucción 3D está en desarrollo. Esta maqueta conceptual permite girar, acercar, seleccionar conjuntos y usar vistas de planta y cortes. Sus máquinas y tuberías están simplificadas frente a la ilustración y las partes ocultas se infieren; no es un modelo constructivo.
+
+[Descargar el explorador HTML experimental](https://github.com/DavidVilem/scene-layout-forge/raw/refs/heads/gh-pages/explorador.html) y abrirlo en un navegador compatible con WebGL. GitHub muestra el código de los archivos HTML en su vista normal; para ejecutarlo desde un enlace web es necesario configurar GitHub Pages.
+
+Las imágenes y el HTML se conservan en la rama [`gh-pages`](https://github.com/DavidVilem/scene-layout-forge/tree/gh-pages), separadas del paquete de la skill.
+
 ## Resultados
 
 Por defecto se generan, en este orden:
