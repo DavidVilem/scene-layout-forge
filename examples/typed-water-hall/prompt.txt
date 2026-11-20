@@ -1,1 +1,0 @@
-Use the typed-water-hall geometry and common written art direction. Preserve explicit nozzle interfaces, header branches, pump inlet/outlet and supported external boundary connections. Keep all five workers and four vessels. Enrich planned architecture and joints without changing fluid routes. Inspect final pixels independently.
